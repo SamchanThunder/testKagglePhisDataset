@@ -5,9 +5,10 @@ import os
 csv_file = os.path.join("./phishingemails_dataset", "Phishing_Email.csv")
 data = pd.read_csv(csv_file)
 
-thirdRow = data.iloc[3]
-email_text = thirdRow['Email Text']
-email_type = thirdRow['Email Type']
+for i in range(10):
+    row = data.iloc[i]
+    email_text = row['Email Text']
+    email_type = row['Email Type']
 
-print("First email text:", email_text)
-print("First email type:", email_type)
+    print("Email:", email_text)
+    print("Type:", email_type)
